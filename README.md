@@ -1,4 +1,4 @@
-### kickstarting with Excel
+# kickstarting with Excel
 ## Overview of the project 
 The aim of the project was to help an upcoming playwriter Louise, crowd fund her play Fever. The estimated budget was $10000. Using the Kickstarter Data we had, the aim was to check how other crowd funded campaigns fared in relation to their goals and time (launch date). 
 ## Purpose
