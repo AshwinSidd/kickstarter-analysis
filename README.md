@@ -1,24 +1,26 @@
 # kickstarting with Excel
 ## Overview of the project 
-The aim of the project was to help an upcoming playwriter Louise, crowd fund her play Fever. The estimated budget was $10000. Using the Kickstarter Data we had, the aim was to check how other crowd funded campaigns fared in relation to their goals and time (launch date). 
+The aim of the project was to help an upcoming playwriter Louise, crowd fund her play *Fever*. The estimated budget was $10000. Using the Kickstarter Data that was given, the aim was to check how other crowd funded campaigns fared in relation to their goals and time (launch date).
 ## Purpose
 The purpose of the project was to **analyze** the dataset, **visualize** how other campaigns fared by analyzing outcomes based on launch dates and goals set, which would then help Louise better understand her approach towards her campaign.  
 ## Analysis and Challenges
-The approach was fairly simple - First analyze the outcomes of other campaigns based on their launch date, then to visualize outcomes based on their goals. This would give Louise an understanding what period is best to launch her play and with what budget estimate. For the first part of analyzing the *outcomes by launch date*, it was important to change the Unix timestamps on the launch dates of the data set. Hence a date conversion formula was applied to it, and then since we also wanted to analyse the data w.r.t the year, the year fomula was applied to the date conversion column. The below screenshot shows the data being cleaned - **Data date conversion** from Unix and then viewing the data by **Year**. 
+The approach was to first analyze the outcomes of other campaigns based on their launch date, then to visualize outcomes based on their goals. This would give Louise an understanding what period is best to launch her play and with what budget estimate. 
+
+For the first part of analyzing the *outcomes by launch date*, it was important to change the Unix timestamps on the launch dates of the data set. Hence a date conversion formula was applied to it, and then since we also wanted to analyse the data w.r.t the year, the year fomula was applied to the date conversion column. The below screenshot shows the data being cleaned - **Date created conversion** from Unix and then formulating the corresponding **Year**.
 
 ![Data date conversion](https://user-images.githubusercontent.com/92342751/139591111-62614f0d-f9ec-4045-8505-5952dd41a12a.png)
 
-Next, a pivot table was created using the count of outcomes as the value corrsponding to the launch date (converted), this was also filtered using years and the parent category which was filtered to Theatre on the pivot table. A pivot chart was then created using this data, which gave us a visual analysis of how plays fared in relation to their launch dates. Below is the pivot table. A line chart was then created using this data. 
+Next, a pivot table was created using the count of outcomes as the value corrsponding to the launch date (converted from Unix timestamp), this was also filtered using years and the parent category which was filtered to Theatre on the pivot table. *A line chart* was then created using this data, which gave us a visual analysis of how the plays fared in relation to their launch dates. Below is the **pivot table**. 
 
 ![Pivot chart](https://user-images.githubusercontent.com/92342751/139592565-7b717ef5-1697-45b6-a9c1-ddfaeb51e45d.png)
 
-For the second part to *analyze outcomes based on goals*, a seperate excel sheet was created to see how the plays did based on parameters. The parameters were the goal amounts set in equal ascencions of $5000, starting with any value lesser than 1000 and ending with any goals reached which were greater than $50000. Then the **Countifs** formula was applied to see how many count of plays corresponded to being *succesful, failed or canceled*. From these, a perecentage for each of the category was found out.
+For the second part to *analyze outcomes based on goals*, a seperate excel sheet was created to see how the plays fared based on parameters. The parameters were the goal amounts put into bins of equal ascencions of $5000, starting with any value lesser than 1000 and ending with any goals reached which were greater than $50000. Then the **Countifs** formula was applied to see how many count of plays corresponded to being *succesful, failed or canceled*. From these, a perecentage for each of the category was found out.
 
 ![Countifs](https://user-images.githubusercontent.com/92342751/139591478-aa3dce54-0324-4c95-b06b-e9e547c5658c.png)
 
 From the above table, a line chart was created which is explained in the later part of this analysis. 
 
-**The challenges** with the data set was that it was an extensive data which was raw, unflitered or uncleaned. To start with the data set had to be cleaned, some of them had no values, which would hinder the use of formulae in excel. The timestamps were in Unix too, hence had to be converted. Data had to be filtered and made sure that only the data required for the outcome of the play was used. 
+**The challenges** with the data set was that, while it was an extensive data which was raw, unflitered or uncleaned. To start with the data set had to be cleaned, some of them had no values, which would hinder the use of formulae in excel. The timestamps were in Unix too, hence had to be converted. Data had to be filtered and made sure that only the data required for the outcome of the play was used. 
 
 ## Analysis of outcomes based on launch date
 Based on the analysis, where we compared which months the plays fared better (had more relative successes), the line chart clearly shows a **peak in the months of May and June**. Which means that of May had the most susccesful campaign outcomes. The month of June came second, relatively closed to May. So the month of May would be the optimal/preferred time for Louise to launch the campaign. Having said that the month of months of June, July and October had relatively more failures. Louise needs to be vary about this and could surely avoid the months of October and July to launch.
@@ -36,9 +38,9 @@ With a large data set, the challenge is to ensure that the right data is used to
 For outcomes based on launch dates, it is clear that May is the best time to launch the play as the probability of the play succeeding is higher. October relatively seems to be the month with higher rates of failures relative to the total number of plays. 
 For outcomes based on goals, the ideal goal target could be $5000 as a lot of succesful plays had this goal. Since Louise planned her goals to be $10000, we could advice her that the target had lesser percentage of success compared to any goal lesser than $5000
 
-There however, are some *limitiations* to this data set. There are a couple of outliers that need to be considered. Maybe we could create some more tables and charts to better understand. A Box and Whisker plot would give us the outliers which could help us analyze the data set better. A percentage average of the outcomes by launch dates may give us more information based on the overall campaign outcomes. For the outcomes by goals, a column graph helps in comparing the campaign outcomes closesly. 
+There however, are some *limitiations* to this data set. The data set does not account for the "qualitative" aspect of the plays. To be precise, plays with a better cast may be the reason for its succes. If data for "reviews" were available fo reach of the plays, that would have been a good measure to understand the data better. With the curent data available, there are a couple of outliers that need to be considered. A Box and Whisker plot would give us the outliers which could help us analyze the data set better. A percentage average of the outcomes by launch dates may give us more information based on the overall campaign outcomes. 
 
-*Other charts* can also be used to analyze the data. I have used column graph for both analysis of outcomes by launch dates (filtered for succesful campaigns) and for outcomes by goals. Below 2 screenshots give a good picture too - 
+*Other charts* can also be used to analyze the data. For the outcomes by goals, a column graph helps in comparing the campaign outcomes closesly. I have used column graph for both analysis of outcomes by launch dates (filtered for succesful campaigns) and for outcomes by goals. Below 2 screenshots give a good picture too - 
 
 ![Bar chart 1](https://user-images.githubusercontent.com/92342751/139593186-fad7b8b7-baac-4b9f-8214-d0e9cfe3fee7.png)
 
